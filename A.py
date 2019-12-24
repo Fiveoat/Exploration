@@ -17,3 +17,4 @@ print(cats)
 name = cats.get("name")
 print(name)
 
+stack()
