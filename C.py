@@ -11,7 +11,6 @@ def parse_file(file):
     pride = "pride"
     for line in file:
         words = line.split()
-        print(words)
         if pride in words:
             pride_count += 1
     print(f"The word pride occurs {pride_count} times in this file.")
