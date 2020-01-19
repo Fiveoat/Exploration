@@ -20,7 +20,6 @@ def display_student(Student):
 
 def main():
     user = prompt_student()
-    print("")
     display_student(user)
 
 
