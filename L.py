@@ -11,7 +11,7 @@ class RashDec:
         self.numer = input("Enter the numerator: ")
         return self.numer
 
-    def return_current_num_dom(self):
+    def print_current_num_dom(self):
         print(f"{self.numer}/{self.denom}")
 
 
@@ -19,7 +19,7 @@ nums = RashDec()
 
 
 def main():
-    nums.return_current_num_dom()
+    nums.print_current_num_dom()
     numerator = nums.get_numer()
     denominator = nums.get_denom()
     print(f"{numerator}/{denominator}")
