@@ -14,5 +14,8 @@ while True:
         break
     if num % 2 == 0:
         even.append(num)
-    else:
+    elif num % 2 != 0:
         odd.append(num)
+    else:
+        print("Invalid entry.")
+        break
