@@ -1,10 +1,10 @@
 from csv import reader
 
-# reader allows us to read the csv file
+# ^^reader allows us to read the csv file
 filename = input("Please enter the data file: ")
 
 
-# this takes the input for the file that will be used in the functions
+# ^^this takes the input for the file that will be used in the functions
 
 
 def calc_lowest_rate():
@@ -25,7 +25,7 @@ def calc_lowest_rate():
                 break
 
 
-# this function calculates the lowest rate and prints out the data associated with it
+# ^^this function calculates the lowest rate and prints out the data associated with it
 
 def calc_highest_rate():
     com_rates = []
@@ -46,7 +46,7 @@ def calc_highest_rate():
                     break
 
 
-# this function calculates the highest rate and prints out the data associated with it
+# ^^this function calculates the highest rate and prints out the data associated with it
 
 def calculate_ave_com_rate():
     total = 0
@@ -61,7 +61,7 @@ def calculate_ave_com_rate():
     print(f"The average commercial rate is: {(total / items)}")
 
 
-# this function calculates the average rate and prints out the data associated with it
+# ^^this function calculates the average rate and prints out the data associated with it
 
 def main():
     global filename
@@ -73,7 +73,7 @@ def main():
     calc_lowest_rate()
 
 
-# this function runs all the functions and displays their results
+# ^^this function runs all the functions and displays their results
 
 if __name__ == "__main__":
     main()
