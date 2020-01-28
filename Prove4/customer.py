@@ -1,6 +1,6 @@
 from order import Order
 
-class Customer(Order):
+class Customer():
     def __init__(self):
         self.id = ""
         self.name = ""

@@ -1,6 +1,6 @@
 from product import Product
 
-class Order(Product):
+class Order():
     def __init__(self):
         self.id = ""
         self.products = []

@@ -1,3 +1,13 @@
-from check04b import Address
+class Address:
+    """ Contains a street address """
 
-address = Address()
+    def __init__(self):
+        self.street = ""
+        self.city = ""
+        self.state = ""
+        self.zip = ""
+
+    def display(self):
+        print(self.street)
+        print("{}, {} {}".format(self.city, self.state, self.zip))
+
