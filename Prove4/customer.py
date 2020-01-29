@@ -1,6 +1,6 @@
 from order import Order
 
-class Customer():
+class Customer:
     def __init__(self):
         self.id = ""
         self.name = ""
@@ -31,7 +31,6 @@ class Customer():
     def display_receipts(self):
         print(f"Detailed receipts for customer '{self.id}':")
         print(f"Name: {self.name}")
-        print("")
         for order in self.orders:
-            order.display_receipt()
             print("")
+            order.display_receipt()

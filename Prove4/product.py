@@ -1,4 +1,4 @@
-class Product():
+class Product:
     def __init__(self, id, name, price, quantity):
         self.id = id
         self.name = name
@@ -9,6 +9,5 @@ class Product():
         return self.price * self.quantity
 
     def display(self):
-        print(self.name + f"({self.quantity}) - ${format(self.get_total_price(),'.2f')}")
-        return self.name + f"({self.quantity}) - ${format(self.get_total_price(),'.2f')}"
-
+        print(self.name + f"({self.quantity}) - ${format(self.get_total_price(), '.2f')}")
+        return self.name + f"({self.quantity}) - ${format(self.get_total_price(), '.2f')}"
