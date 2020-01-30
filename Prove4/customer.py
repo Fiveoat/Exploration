@@ -1,6 +1,7 @@
 from order import Order
 
-class Customer:
+
+class Customer(Order):
     def __init__(self):
         self.id = ""
         self.name = ""
@@ -26,7 +27,7 @@ class Customer:
         print(f"Summary for customer '{self.id}':")
         print(f"Name: {self.name}")
         print(f"Orders: {self.get_order_count()}")
-        print(f"Total: {format(self.get_total(),'.2f')}")
+        print(f"Total: ${format(self.get_total(), '.2f')}")
 
     def display_receipts(self):
         print(f"Detailed receipts for customer '{self.id}':")
@@ -34,3 +35,5 @@ class Customer:
         for order in self.orders:
             print("")
             order.display_receipt()
+
+
