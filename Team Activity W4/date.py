@@ -5,9 +5,9 @@ class Date:
         self.year = 2000
 
     def date_prompt(self):
-        self.day = input("Day: ")
-        self.month = input("Month: ")
-        self.year = input("Year: ")
+        self.day = int(input("Day: "))
+        self.month = int(input("Month: "))
+        self.year = int(input("Year: "))
 
     def date_display(self):
         return f"{self.month}/{self.day}/{self.year}"

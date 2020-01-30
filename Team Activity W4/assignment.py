@@ -12,13 +12,13 @@ class Assignment:
         self.name = input("Name: ")
         print("")
         print("Start Date: ")
-        start = self.start.date_prompt()
+        self.start.date_prompt()
         print("")
         print("Due Date: ")
-        due = self.due.date_prompt()
+        self.due.date_prompt()
         print("")
         print("End Date: ")
-        end = self.end.date_prompt()
+        self.end.date_prompt()
         print("")
 
     def assignment_display(self):
