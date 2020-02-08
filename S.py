@@ -16,53 +16,57 @@ SCORE_MISS = 5
 
 class Ball:
     def __init__(self):
-        self.x = 1
+        self.center = Point()
+        self.velocity = Velocity()
 
     def draw(self):
-        pass
+        arcade.draw_circle_filled(self.center.x, self.center.y, BALL_RADIUS, arcade.color.RED)
 
     def advance(self):
-        pass
-
-    def center(self):
-        self.x = 1
-
-    def velocity(self):
-        pass
+        self.center.x = self.center.x + self.velocity.dx
+        self.center.y = self.center.y + self.velocity.dy
 
     def bounce_horizontal(self):
-        pass
+        self.velocity.dx *= -1
 
     def bounce_vertical(self):
-        pass
+        self.velocity.dy *= -1
 
     def restart(self):
-        pass
+        self.center = Point()
 
 
 class Paddle:
     def __init__(self):
-        self.x = 1
+        self.center = Point()
+        self.center.x = SCREEN_WIDTH - 20
+        self.center.y = 40
 
     def draw(self):
-        pass
+        arcade.draw_rectangle_filled(self.center.x, self.center.y, PADDLE_WIDTH, PADDLE_HEIGHT, arcade.color.BLACK)
 
     def center(self):
-        self.x = self.x
+        self.center = self.center
 
     def move_up(self):
-        pass
+        if self.center.y < SCREEN_HEIGHT - (PADDLE_HEIGHT / 2):
+            self.center.y += MOVE_AMOUNT
 
     def move_down(self):
-        pass
+        if self.center.y > (PADDLE_HEIGHT / 2):
+            self.center.y -= MOVE_AMOUNT
 
 
 class Velocity:
-    pass
+    def __init__(self):
+        self.dx = random.uniform(-4, 5)
+        self.dy = random.uniform(-3, 3)
 
 
 class Point:
-    pass
+    def __init__(self):
+        self.x = 10
+        self.y = random.uniform(0, SCREEN_HEIGHT)
 
 
 class Pong(arcade.Window):

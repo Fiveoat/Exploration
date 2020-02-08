@@ -51,6 +51,7 @@ class MyApplication(arcade.Window):
         arcade.draw_text("This is a simple template to start your game.",
                          10, SCREEN_HEIGHT // 2, arcade.color.BLACK, 20)
 
+
     def update(self, delta_time):
         """
         All the logic to move, and the game logic goes here.
@@ -83,13 +84,14 @@ class MyApplication(arcade.Window):
         # way to do this is to do a bitwise AND to ignore the NUM-LOCK
         # code (and other codes).  The second condition would be written as:
         # "key_modifiers & arcade.key.MOD_SHIFT == arcade.key.MOD_SHIFT"
-        if key == arcade.key.SPACE and key_modifiers == arcade.key.MOD_SHIFT:
-            print("You pressed shift-space")
+        if key == arcade.key.SPACE:
+            thing - self.on_draw()
+
 
 
         # See if the user just hit space.
-        elif key == arcade.key.SPACE:
-            print("You pressed the space bar.")
+        # elif key == arcade.key.SPACE:
+        #     print("You pressed the space bar.")
 
     def on_key_release(self, key, key_modifiers):
         """
@@ -102,11 +104,11 @@ class MyApplication(arcade.Window):
         """
         Called whenever the mouse moves.
         """
-        pass
+
 
     def on_mouse_press(self, x, y, button, key_modifiers):
         """
-        Called when the user presses a mouse button.
+        self.ball = self.ball * 2
         """
         pass
 
