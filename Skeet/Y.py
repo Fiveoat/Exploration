@@ -201,7 +201,7 @@ class Game(arcade.Window):
         # clear the screen to begin drawing
         arcade.start_render()
         # draw background
-        arcade.draw_lrwh_rectangle_textured(0, 0,SCREEN_WIDTH, SCREEN_HEIGHT,self.background)
+        arcade.draw_lrwh_rectangle_textured(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, self.background)
         # draw each object
         self.rifle.draw()
         #  draws bullets
